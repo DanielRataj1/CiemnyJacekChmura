@@ -25,28 +25,28 @@ body {
 
 
 
-#dealer-karty img {
+#dealer-cards img {
     height: 5%;
     width: 5%;
     margin: 1px;
     transition: 0.3s;
 }
 
-#dealer-karty img:hover{
+#dealer-cards img:hover{
     opacity: 0.5;
     transition: 0.3s;
 }
 
 
 
-#gracz-karty img {
+#player-cards img {
     height: 5%;
     width: 5%;
     margin: 1px;
     transition: 0.3s;
 }
 
-#gracz-karty img:hover{
+#player-cards img:hover{
     opacity: 0.5;
     transition: 0.3s;
 }
@@ -93,7 +93,7 @@ body {
     transition: 0.3s;
 }
 
-#wynik {
+#result {
     font-size: 20px;
     color: yellow;
     margin: 50px;
