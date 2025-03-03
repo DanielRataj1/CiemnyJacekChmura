@@ -13,6 +13,136 @@ body {
     background-size: 70%;
 }
 
+/* Styl dla kart */
+#dealer-cards img, #player-cards img {
+    height: 5%;
+    width: 5%;
+    margin: 1px;
+    transition: 0.3s;
+}
+
+#dealer-cards img:hover, #player-cards img:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+/* Styl dla ukrytej karty */
+#hidden {
+    height: 5%;
+    width: 5%;
+    margin: 1px;
+}
+
+#start-page {
+    text-align: center;
+    margin-top: 20%;
+}
+
+#start-page h1 {
+    font-size: 48px;
+    color: white;
+}
+
+#start-page p {
+    font-size: 24px;
+    color: white;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #FFD700; /* Złoty kolor */
+    border: none;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: #e6c200; /* Ciemniejszy odcień po najechaniu */
+}
+
+/* Animacja rozdawania kart */
+@keyframes deal {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Animacja dobierania karty */
+@keyframes hit {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Animacja odkrywania karty */
+@keyframes flip {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+/* Animacja wyniku */
+@keyframes result {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Styl dla wyniku */
+#result {
+    font-size: 20px;
+    color: yellow;
+    margin: 50px;
+    transition: 0.3s;
+}
+
+/* Styl dla przycisków */
+#hit, #stay, #reset {
+    width: 100px;
+    height: 43px;
+    font-size: 20px;
+    background-size: 100%;
+    transition: 0.3s;
+}
+
+#hit:hover, #stay:hover, #reset:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+#hit {
+    background: url(./karty_OG_Projcet/hit.png) no-repeat;
+    background-size: 100%;
+}
+
+#stay {
+    background: url(./karty_OG_Projcet/stand.png) no-repeat;
+    background-size: 100%;
+}
+
+#reset {
+    background: url(./karty_OG_Projcet/reset.png) no-repeat;
+    background-size: 100%;
+}
+
+h2 {
+    background-color: rgb(0, 0, 0, 0);
+    margin-top: 150px;
+    color: white;
+}
+
+body {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-image: url("./stol1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgb(60,0,0);
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+    background-size: 70%;
+}
+
 /* #dealer-karty img {
     height: 175px;
     width: 125px;
@@ -23,89 +153,8 @@ body {
     margin: 11.5%;
 } */
 
-
-
-#dealer-cards img {
-    height: 5%;
-    width: 5%;
-    margin: 1px;
-    transition: 0.3s;
-}
-
-#dealer-cards img:hover{
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-
-
-#player-cards img {
-    height: 5%;
-    width: 5%;
-    margin: 1px;
-    transition: 0.3s;
-}
-
-#player-cards img:hover{
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-#hit {
-    width: 103px;
-    height: 43px;
-    font-size: 20px;
-    background:url(./karty_OG_Projcet/hit.png) no-repeat; 
-    background-size: 100%;
-    transition: 0.3s;
-}
-
-#hit:hover{
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-#stay {
-    width: 100px;
-    height: 43px;
-    font-size: 20px;
-    background:url(./karty_OG_Projcet/stand.png) no-repeat; 
-    background-size: 100%;
-    transition: 0.3s;
-}
-
-#stay:hover{
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-#reset {
-    width: 100px;
-    height: 43px;
-    font-size: 20px;
-    background:url(./karty_OG_Projcet/reset.png) no-repeat; 
-    background-size: 100%;
-    transition: 0.3s;
-}
-
-#reset:hover{
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-#result {
-    font-size: 20px;
-    color: yellow;
-    margin: 50px;
-    transition: 0.3s;
-}
-
 h2 {
     background-color:rgb(0, 0, 0, 0);
     margin-top: 150px;
     color: white;
-}
-
-#hidden {
-    margin: 0%;
 }
