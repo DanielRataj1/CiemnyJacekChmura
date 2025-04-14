@@ -1,0 +1,25 @@
+name: Deploy Vanilla JS App to Azure
+
+on:
+  push:
+    branches:
+      - main  # Lub inna gałąź, na której pracujesz
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Deploy to Azure Static Web Apps
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "/"  # Jeśli pliki HTML, CSS, JS są w głównym katalogu
+          output_location: ""  # Puste, bo nie ma builda jak w React
+          routes_location: "routes.json"
+
